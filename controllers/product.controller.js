@@ -1,7 +1,7 @@
 
 const asyncHandler = require("express-async-handler");
 const productModel = require("../models/product.model");
-const { uid } = require('../middleware/uid');
+const uid = require('../middleware/uid');
 
 const get = asyncHandler(async (req, res) => {
 

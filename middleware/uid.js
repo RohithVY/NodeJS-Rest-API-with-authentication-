@@ -5,4 +5,4 @@ const uid  = () => {
     return head + tail;
 }
 
-modules.export = uid;
+module.exports = uid;
