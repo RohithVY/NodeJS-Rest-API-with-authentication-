@@ -20,6 +20,10 @@ const productSchema = mongoose.Schema({
         type:Number, 
         required:[true, "price field is required"]
     },
+    files:{
+        type: Array
+        // required:  [true, "image file or files is required"]    
+    }
  });
 
 module.exports = mongoose.model('Product', productSchema);

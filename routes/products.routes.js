@@ -1,18 +1,21 @@
-
 const express = require("express");
-
+const upload = require("../connection/multer");
 //Importing express router
 const router = express.Router();
 
 //Importing the product controller 
 const { create, update, get, show, deleteProduct} =  require("../controllers/product.controller.js");
 
-
+router.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "*");
+    next();
+})
 // Route for creating a product 
-router.post("/create", create);
+router.post("/create", upload.array('files', 10), create);
 
 //Route to update a specfic product
-router.put("/update/:id", update);
+router.put("/update/:id", upload.array('files', 10), update);
 
 //route to get all products
 router.get("/get", get);
