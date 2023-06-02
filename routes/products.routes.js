@@ -20,7 +20,7 @@ router.post("/create", verifyToken, upload.array('files', 10), create);
 router.put("/update/:id", verifyToken, upload.array('files', 10), update);
 
 //route to get all products
-router.get("/get", verifyToken, get);
+router.get("/get", get);
 
 //route to get or show only a specfic product
 router.get("/show/:id", verifyToken, show);
