@@ -42,7 +42,6 @@ const create = asyncHandler(async (req, res) => {
     const uploader = async (path) => await cloudinary.uploads(path, "Images")
 
     try {
-
         if (req.method === 'POST') {
             const urls = []
             if (req.files) {

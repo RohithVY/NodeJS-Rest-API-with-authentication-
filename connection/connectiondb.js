@@ -8,7 +8,7 @@ try{
         useUnifiedTopology: true,
     });
 
-    console.log(`connected to db in host : ${DBConnection.connection.host}`);
+    // console.log(`connected to db in host : ${DBConnection.connection.host}`);
 } catch (error){
     console.log(error.message);
     process.exit(1);
